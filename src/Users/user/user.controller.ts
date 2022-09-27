@@ -17,6 +17,7 @@ export class UserController {
     }
     @Get('/:correo')
     getUser(@Param('correo') param) : User{
+        // Valida la respuesta, si el usuario no existe, regresa un mensaje diciendo que no fue encontrado
         return this.userService.getByEmail(param)
     }
 }
