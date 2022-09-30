@@ -16,4 +16,19 @@ export class UserService {
     getByEmail(correo : string) : User{
         return this.Users.find( (user) => user.correo === correo )
     }
+
+    updateUserById(id : number, user : User) : boolean {
+        let user_index = this.Users.findIndex( (user) => user.id === id )
+        if(user_index !== -1 ){
+            //mantener los datos que no se van a actualizar
+            this.Users[user_index] = {
+                id : user.id,
+                nombre : user.nombre,
+                correo : user.correo,
+                telefono : user.telefono
+            }
+            return true
+        }
+        return false
+    }
 }
