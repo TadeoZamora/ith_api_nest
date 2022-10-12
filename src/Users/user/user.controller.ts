@@ -12,7 +12,12 @@ export class UserController {
         if(this.userService.userExists(Number(params.id))){
             return "El usuario ya existe"
         }
-        return this.userService.create(params)
+        try {
+            this.userService.create(params)
+            return true
+        } catch (error) {
+            console.log({error})
+        }
     }
     @Get('/all')
     getUsers(): User[] {
