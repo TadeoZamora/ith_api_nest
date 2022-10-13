@@ -3,12 +3,11 @@ import { Connection } from './configs/DBConnection';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UserController } from './users/user/user.controller';
-import { UserService } from './users/user/user.service';
-import { UserModule } from './Users/user/user.module';
+import { UserModule } from './api/Users/user/user.module';
+import { SalesModule } from './api/Sales/sales.module';
 
 @Module({
-  imports: [Connection, UserModule],
+  imports: [Connection, UserModule, SalesModule],
   controllers: [AppController],
   providers: [AppService],
 })
