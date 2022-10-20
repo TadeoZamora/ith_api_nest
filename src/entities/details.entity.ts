@@ -17,7 +17,7 @@ export class Details{
     unit_price : number;
 
 
-    @ManyToOne(()=> Sales, (sales) => sales.details)
+    @ManyToOne(()=> Sales, (sales) => sales.id)
     @JoinColumn({ name: 'id_sales'})
     sales: Sales;
 }
