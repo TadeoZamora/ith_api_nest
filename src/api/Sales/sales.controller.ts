@@ -2,7 +2,7 @@ import { ISales } from './../../models/Sales';
 import { Body, Controller, Post } from '@nestjs/common';
 import { SalesService } from './sales.service';
 
-@Controller('sales')
+@Controller('venta')
 export class SalesController {
     constructor( private salesService : SalesService ){
     }

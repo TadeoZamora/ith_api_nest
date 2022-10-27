@@ -1,7 +1,7 @@
 ## Tarea para semana del 17 al 21
-* Crear la entidad de detalle
-* Crear el servicio de detalle
-* Crear el controlador de detalle
+* Crear la entidad de detalle *
+* Crear el servicio de detalle 
+* Crear el controlador de detalle (1/2) 
 * Insertar la relacion del detalle
 
 ### TIENE QUE CORRER!
