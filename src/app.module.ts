@@ -1,3 +1,4 @@
+import { DetailsService } from './api/details/details.service';
 import { Module } from '@nestjs/common';
 import { Connection } from './configs/DBConnection';
 
@@ -9,6 +10,7 @@ import { SalesModule } from './api/Sales/sales.module';
 @Module({
   imports: [Connection, UserModule, SalesModule],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    DetailsService, AppService],
 })
-export class AppModule {}
+export class AppModule { }
