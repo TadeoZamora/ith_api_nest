@@ -5,11 +5,11 @@ import { Details } from 'src/entities/details.entity';
 
 export const Connection = TypeOrmModule.forRoot({
     type: 'mysql',
-    host: 'localhost',
-    port: 3306,
-    username: 'root',
-    password: '',
-    database: 'ith-db',
+    host: process.env.DB_HOST,
+    port: Number(process.env.DB_PORT),
+    username: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
     entities: [User, Sales, Details],
     synchronize: true
 })

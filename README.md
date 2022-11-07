@@ -1,3 +1,8 @@
+## Actualizacion con Docker
+* recuerda que debes crear dos nuevos archivos de entorno
+* .env.local - este debera tener los valores locales
+* .env - este debera tener los valores del contenedor
+
 ## Tarea para semana del 17 al 21
 * Crear la entidad de detalle *
 * Crear el servicio de detalle 
